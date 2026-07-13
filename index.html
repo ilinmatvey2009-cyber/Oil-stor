@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoOil — интернет-магазин моторных масел</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">🛢️ AutoOil</div>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О нас</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">
+      🛒 Корзина <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Моторные масла для вашего авто</h1>
+    <p>Оригинальная продукция, гарантия качества, доставка по всей России</p>
+    <a href="#catalog" class="btn-primary">Перейти в каталог</a>
+  </div>
+</section>
+
+<section class="filters" id="catalog">
+  <h2>Каталог масел</h2>
+  <div class="filter-bar">
+    <select id="filterType">
+      <option value="all">Все типы</option>
+      <option value="synthetic">Синтетика</option>
+      <option value="semi">Полусинтетика</option>
+      <option value="mineral">Минеральное</option>
+    </select>
+
+    <select id="filterVolume">
+      <option value="all">Любой объём</option>
+      <option value="1">1 л</option>
+      <option value="4">4 л</option>
+      <option value="5">5 л</option>
+    </select>
+
+    <select id="sortPrice">
+      <option value="default">Сортировка</option>
+      <option value="asc">Сначала дешевле</option>
+      <option value="desc">Сначала дороже</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="about" id="about">
+  <h2>О нас</h2>
+  <p>AutoOil — магазин моторных масел и автохимии. Работаем с проверенными поставщиками, продаём только оригинальную продукцию с сертификатами качества. На рынке с 2018 года.</p>
+</section>
+
+<section class="delivery" id="delivery">
+  <h2>Доставка и оплата</h2>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <h3>🚚 Курьером</h3>
+      <p>По городу — 1-2 дня, от 300 ₽. Бесплатно при заказе от 3000 ₽.</p>
+    </div>
+    <div class="delivery-card">
+      <h3>📦 Пункты выдачи</h3>
+      <p>СДЭК, Boxberry — по всей России, 2-7 дней.</p>
+    </div>
+    <div class="delivery-card">
+      <h3>💳 Оплата</h3>
+      <p>Картой онлайн, при получении, через СБП.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <h2>Контакты</h2>
+  <p>📞 +7 (900) 123-45-67</p>
+  <p>📧 info@autooil-shop.ru</p>
+  <p>📍 г. Москва, ул. Примерная, д. 1</p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 AutoOil. Все права защищены.</p>
+</footer>
+
+<!-- Корзина -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Корзина</h3>
+    <button id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">Итого: <span id="cartTotal">0 ₽</span></div>
+    <button class="btn-primary" id="checkoutBtn">Оформить заказ</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
